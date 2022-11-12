@@ -378,5 +378,5 @@ gitter:
 ##
 deploy:
   type: git
-  repo: https://github.com/<yourAccount>/<repo> # or https://gitee.com/<yourAccount>/<repo>
-  branch: <your-branch>
+  repo: git@github.com:youngOman/akebi.github.io.git # or https://gitee.com/<yourAccount>/<repo>
+  branch: main
