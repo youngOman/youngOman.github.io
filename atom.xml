@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Young&#39;s Blog</title>
+  <icon>https://www.gravatar.com/avatar/1e23211eb7d85ec2757b33bfc690e6f3</icon>
+  <subtitle>做自己喜歡的事，不代表一直都能樂在其中</subtitle>
+  <link href="http://yoursite-url/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite-url/"/>
+  <updated>2022-11-14T08:47:51.000Z</updated>
+  <id>http://yoursite-url/</id>
+  
+  <author>
+    <name>young</name>
+    <email>loyang0921@gmail.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>title</title>
+    <link href="http://yoursite-url/undefined/title/"/>
+    <id>http://yoursite-url/undefined/title/</id>
+    <published>2022-11-14T08:47:51.000Z</published>
+    <updated>2022-11-14T08:47:51.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;測試用&quot;&gt;測試用&lt;/h2&gt;
+&lt;p&gt;Github Repo: &lt;a href=&quot;https://github.com/V-Vincen/hexo-theme-livemylife&quot;&gt;https://github.com/V-Vincen/hexo-theme-liv</summary>
+      
+    
+    
+    
+    <category term="anime" scheme="http://yoursite-url/categories/anime/"/>
+    
+    
+    <category term="lol" scheme="http://yoursite-url/tags/lol/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Theme-LiveMyLife</title>
+    <link href="http://yoursite-url/cn/cn/Hexo-Theme-LiveMyLife/"/>
+    <id>http://yoursite-url/cn/cn/Hexo-Theme-LiveMyLife/</id>
+    <published>2020-04-16T18:34:17.000Z</published>
+    <updated>2020-04-16T18:34:17.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;移植 &lt;a href=&quot;https://github.com/Huxpro/huxpro.github.io&quot;&gt;Hux Blog&lt;/a&gt; 的主题，感谢 &lt;a href=&quot;https://github.com/Huxpro&quot;&gt;Huxpro&lt;/a&gt; 设</summary>
+      
+    
+    
+    
+    <category term="Hexo-Theme-LiveMyLife" scheme="http://yoursite-url/categories/Hexo-Theme-LiveMyLife/"/>
+    
+    
+    <category term="Hexo-Theme-LiveMyLife" scheme="http://yoursite-url/tags/Hexo-Theme-LiveMyLife/"/>
+    
+  </entry>
+  
+</feed>
