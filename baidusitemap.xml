@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite-url/undefined/title/</loc>
+    <loc>http://yoursite-url/undefined/git-conflict/</loc>
+    <lastmod>2022-11-15</lastmod>
+  </url>
+  <url>
+    <loc>http://yoursite-url/undefined/Django-deploy/</loc>
     <lastmod>2022-11-14</lastmod>
   </url>
   <url>

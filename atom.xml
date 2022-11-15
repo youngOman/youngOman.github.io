@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Young&#39;s Blog</title>
+  <title>YG BLOG</title>
   <icon>https://www.gravatar.com/avatar/1e23211eb7d85ec2757b33bfc690e6f3</icon>
-  <subtitle>做自己喜歡的事，不代表一直都能樂在其中</subtitle>
+  <subtitle>Akebi &amp; Young&#39;s Metaverse</subtitle>
   <link href="http://yoursite-url/atom.xml" rel="self"/>
   
   <link href="http://yoursite-url/"/>
-  <updated>2022-11-14T08:47:51.000Z</updated>
+  <updated>2022-11-15T06:13:27.000Z</updated>
   <id>http://yoursite-url/</id>
   
   <author>
@@ -17,25 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>title</title>
-    <link href="http://yoursite-url/undefined/title/"/>
-    <id>http://yoursite-url/undefined/title/</id>
+    <title>git-conflict</title>
+    <link href="http://yoursite-url/undefined/git-conflict/"/>
+    <id>http://yoursite-url/undefined/git-conflict/</id>
+    <published>2022-11-15T06:13:27.000Z</published>
+    <updated>2022-11-15T06:13:27.000Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>將Django部署至私有Ubuntu主機上</title>
+    <link href="http://yoursite-url/undefined/Django-deploy/"/>
+    <id>http://yoursite-url/undefined/Django-deploy/</id>
     <published>2022-11-14T08:47:51.000Z</published>
     <updated>2022-11-14T08:47:51.000Z</updated>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;測試用&quot;&gt;測試用&lt;/h2&gt;
-&lt;p&gt;Github Repo: &lt;a href=&quot;https://github.com/V-Vincen/hexo-theme-livemylife&quot;&gt;https://github.com/V-Vincen/hexo-theme-liv</summary>
+    <summary type="html">&lt;h2 id=&quot;測試用&quot;&gt;&lt;a href=&quot;#測試用&quot; class=&quot;headerlink&quot; title=&quot;測試用&quot;&gt;&lt;/a&gt;測試用&lt;/h2&gt;&lt;p&gt;Github Repo: &lt;a href=&quot;https://github.com/V-Vincen/hexo-theme-livem</summary>
       
     
     
     
-    <category term="anime" scheme="http://yoursite-url/categories/anime/"/>
+    <category term="程式" scheme="http://yoursite-url/categories/%E7%A8%8B%E5%BC%8F/"/>
     
     
-    <category term="lol" scheme="http://yoursite-url/tags/lol/"/>
+    <category term="Django" scheme="http://yoursite-url/tags/Django/"/>
+    
+    <category term="Nginx" scheme="http://yoursite-url/tags/Nginx/"/>
+    
+    <category term="Linux" scheme="http://yoursite-url/tags/Linux/"/>
     
   </entry>
   
