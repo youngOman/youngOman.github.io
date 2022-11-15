@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>YG BLOG</title>
+  <icon>https://www.gravatar.com/avatar/1e23211eb7d85ec2757b33bfc690e6f3</icon>
+  <subtitle>Akebi &amp; Young&#39;s Metaverse</subtitle>
+  <link href="http://yoursite-url/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite-url/"/>
+  <updated>2022-11-15T11:39:55.000Z</updated>
+  <id>http://yoursite-url/</id>
+  
+  <author>
+    <name>young</name>
+    <email>loyang0921@gmail.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TF-IDF演算法</title>
+    <link href="http://yoursite-url/undefined/TF-IDF/"/>
+    <id>http://yoursite-url/undefined/TF-IDF/</id>
+    <published>2022-11-15T11:39:55.000Z</published>
+    <updated>2022-11-15T11:39:55.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;敬請期待&quot;&gt;敬請期待~~~~~~&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;tf-idf_ex1.png&quot; alt=&quot;tf-idf_ex1&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="程式語言" scheme="http://yoursite-url/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/"/>
+    
+    
+    <category term="Sentiment analysis" scheme="http://yoursite-url/tags/Sentiment-analysis/"/>
+    
+    <category term="Algorithm" scheme="http://yoursite-url/tags/Algorithm/"/>
+    
+    <category term="Textmining" scheme="http://yoursite-url/tags/Textmining/"/>
+    
+    <category term="機器學習" scheme="http://yoursite-url/tags/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>將Django部署至私有Ubuntu主機上</title>
+    <link href="http://yoursite-url/tw/Django-deploy/"/>
+    <id>http://yoursite-url/tw/Django-deploy/</id>
+    <published>2022-11-14T08:47:51.000Z</published>
+    <updated>2022-11-14T08:47:51.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前情提要&quot;&gt;前情提要&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&quot;使用的工具、系統&quot;&gt;使用的工具、系統&lt;/h3&gt;
+&lt;p&gt;我會全程使用Ubuntu OS帶大家去實作，當然用Windows也可以，但建議大家如果想學伺服器相關知識，Linux是必備的技能，功能跟</summary>
+      
+    
+    
+    
+    <category term="程式設計" scheme="http://yoursite-url/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    
+    <category term="Django" scheme="http://yoursite-url/tags/Django/"/>
+    
+    <category term="Nginx" scheme="http://yoursite-url/tags/Nginx/"/>
+    
+    <category term="Linux" scheme="http://yoursite-url/tags/Linux/"/>
+    
+    <category term="Vim" scheme="http://yoursite-url/tags/Vim/"/>
+    
+  </entry>
+  
+</feed>
