@@ -2,35 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite-url/404.html</loc>
-    
-    <lastmod>2022-11-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite-url/categories/index.html</loc>
     
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/index.html</loc>
     
+    <lastmod>2022-11-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/404.html</loc>
+    
+    <lastmod>2022-11-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/SSH-connect/</loc>
+    
+    <lastmod>2022-11-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/TF-IDF/</loc>
+    
     <lastmod>2022-11-15</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite-url/undefined/TF-IDF/</loc>
-    
-    <lastmod>2022-11-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/tw/Django-deploy/</loc>
+    <loc>http://yoursite-url/Django-deploy/</loc>
     
     <lastmod>2022-11-14</lastmod>
     
@@ -53,7 +60,7 @@
 
   <url>
     <loc>http://yoursite-url/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,56 +68,63 @@
   
   <url>
     <loc>http://yoursite-url/tags/Django/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Nginx/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Linux/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Vim/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Sentiment-analysis/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Algorithm/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Textmining/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/tags/SSH/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -119,14 +133,7 @@
   
   <url>
     <loc>http://yoursite-url/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/</loc>
-    <lastmod>2022-11-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite-url/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

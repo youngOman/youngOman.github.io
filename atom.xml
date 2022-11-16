@@ -6,20 +6,47 @@
   <link href="http://yoursite-url/atom.xml" rel="self"/>
   
   <link href="http://yoursite-url/"/>
-  <updated>2022-11-15T11:39:55.000Z</updated>
+  <updated>2022-11-16T01:14:55.000Z</updated>
   <id>http://yoursite-url/</id>
   
   <author>
-    <name>young</name>
+    <name>Young</name>
     <email>loyang0921@gmail.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SSH 縮短主機之間的距離🖤</title>
+    <link href="http://yoursite-url/SSH-connect/"/>
+    <id>http://yoursite-url/SSH-connect/</id>
+    <published>2022-11-16T01:14:55.000Z</published>
+    <updated>2022-11-16T01:14:55.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1&gt;尚未完成~~~稍後補上&lt;/h1&gt;
+&lt;h2 id=&quot;SSH基礎知識&quot;&gt;SSH基礎知識&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SSH 是一種遠端連線安全加密傳輸協定，CUI/GUI兩種版本都有，大部分的 Linux 伺服器都會提供 SSH 的連線服務，讓使用者或管理者遠端</summary>
+      
+    
+    
+    
+    <category term="程式設計" scheme="http://yoursite-url/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    
+    <category term="Linux" scheme="http://yoursite-url/tags/Linux/"/>
+    
+    <category term="SSH" scheme="http://yoursite-url/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TF-IDF演算法</title>
-    <link href="http://yoursite-url/undefined/TF-IDF/"/>
-    <id>http://yoursite-url/undefined/TF-IDF/</id>
+    <link href="http://yoursite-url/TF-IDF/"/>
+    <id>http://yoursite-url/TF-IDF/</id>
     <published>2022-11-15T11:39:55.000Z</published>
     <updated>2022-11-15T11:39:55.000Z</updated>
     
@@ -33,7 +60,7 @@
     
     
     
-    <category term="程式語言" scheme="http://yoursite-url/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/"/>
+    <category term="程式設計" scheme="http://yoursite-url/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
     
     
     <category term="Sentiment analysis" scheme="http://yoursite-url/tags/Sentiment-analysis/"/>
@@ -48,8 +75,8 @@
   
   <entry>
     <title>將Django部署至私有Ubuntu主機上</title>
-    <link href="http://yoursite-url/tw/Django-deploy/"/>
-    <id>http://yoursite-url/tw/Django-deploy/</id>
+    <link href="http://yoursite-url/Django-deploy/"/>
+    <id>http://yoursite-url/Django-deploy/</id>
     <published>2022-11-14T08:47:51.000Z</published>
     <updated>2022-11-14T08:47:51.000Z</updated>
     
@@ -57,9 +84,9 @@
       
       
     <summary type="html">&lt;h2 id=&quot;前情提要&quot;&gt;前情提要&lt;/h2&gt;
+&lt;h3 id=&quot;部署的方式&quot;&gt;部署的方式&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;h3 id=&quot;使用的工具、系統&quot;&gt;使用的工具、系統&lt;/h3&gt;
-&lt;p&gt;我會全程使用Ubuntu OS帶大家去實作，當然用Windows也可以，但建議大家如果想學伺服器相關知識，Linux是必備的技能，功能跟</summary>
+&lt;p&gt;網路上部署教學非常多，但高達95%都是教怎麼透過第三方部署平台例如 Heroku,Azuew,GCP…等等，但我就是想架在自己架設的 Ubuntu主</summary>
       
     
     

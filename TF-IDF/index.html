@@ -43,7 +43,7 @@
   <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="blog about some coding tips"/>
+  <meta name="description" content="Young&#39;s coding tips &amp; life &amp; akebi"/>
   <meta name="keyword" content="young,akebi,IT,sofeware Engineer,blog,Blog"/>
   <link rel="shortcut icon" href="/img/avatar/favicon.png"/>
 
@@ -127,10 +127,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/tw/">
+  <link rel="canonical" href="http://yoursite-url/TF-IDF/">
   <title>
     
-      Young &amp; Akebi&#39;s Tech Blog
+      TF-IDF演算法 - Young &amp; Akebi&#39;s Tech Blog
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="YG BLOG" type="application/atom+xml">
@@ -234,7 +234,7 @@ i {
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/"><i class="fa-solid fa-house"></i>首頁</a>
+            <a href="/"><i class="fa-solid fa-house"></i>HOME</a>
           </li>
 
           
@@ -242,31 +242,20 @@ i {
           
           
           <li>
-            <a href="/categories/">
-              
-              <i class="fa-sharp fa-solid fa-cube"></i>分類
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/about/">
-              
-              <i class="fa-solid fa-address-card"></i>關於
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/archive/">
               
-              <i class="fa-solid fa-box-archive"></i>歸檔
+              <i class="fa-solid fa-box-archive"></i>ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              <i class="fa-sharp fa-solid fa-cube"></i>CATEGORIES
               
               
             </a>
@@ -277,7 +266,18 @@ i {
           <li>
             <a href="/tags/">
               
-              <i class="fa-solid fa-tags"></i>標簽
+              <i class="fa-solid fa-tags"></i>TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              <i class="fa-solid fa-address-card"></i>ABOUT
               
               
             </a>
@@ -288,7 +288,7 @@ i {
           
           <li>
             <a class="popup-trigger">
-              <span class="search-icon"></span><i class="fa-solid fa-magnifying-glass"></i>search</a>
+              <span class="search-icon"></span><i class="fa-solid fa-magnifying-glass"></i>SEARCH</a>
           </li>
           
 
@@ -343,19 +343,19 @@ i {
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/home.png');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/archive_bg.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/tf_idf.png');
+      --intro-header-background-image-url-page: url('//img/header_img/tf_idf.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/home.png');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tf_idf.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/tf_idf.png');
     }
 
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('/img/header_img/home.png'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/tf_idf.png'); */
       
     }
 
@@ -377,10 +377,48 @@ i {
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>YG BLOG</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">Akebi &amp; Young&#39;s Metaverse</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Sentiment analysis" title="Sentiment analysis">Sentiment analysis</a>
+              
+              <a class="tag" href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+              
+              <a class="tag" href="/tags/#Textmining" title="Textmining">Textmining</a>
+              
+              <a class="tag" href="/tags/#機器學習" title="機器學習">機器學習</a>
+              
+            </div>
+            <h1>TF-IDF演算法</h1>
+            <h2 class="subheading">衡量字詞在一份文本內的重要程度之演算法</h2>
+            <span class="meta">
+              Posted by Young on
+              2022-11-15
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">1</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">4</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -421,308 +459,263 @@ i {
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="敬請期待">敬請期待~~~~~~</h2>
+<p><img src="tf-idf_ex1.png" alt="tf-idf_ex1"></p>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/SSH-connect/" data-toggle="tooltip" data-placement="top" title="SSH 縮短主機之間的距離🖤">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/Django-deploy/" data-toggle="tooltip" data-placement="top" title="將Django部署至私有Ubuntu主機上">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
     
-
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-
-      <!-- Main Content -->
-
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/tw/Django-deploy/">
-    <h2 class="post-title">
-      將Django部署至私有Ubuntu主機上
-    </h2>
-    <h3 class="post-subtitle">
-      再也不用受第三方平台的任何流量及檔案限制
-    </h3>
-    <div class="post-content-preview">
-      前情提要
-
-使用的工具、系統
-我會全程使用Ubuntu OS帶大家去實作，當然用Windows也可以，但建議大家如果想學伺服器相關知識，Linux是必備的技能，功能跟穩定性都是直接把Windows壓在地板上磨擦。
-
-DNS基礎知識
-
-一般架設網站時不管你是Code from Scratch還是用Wordpress等都需申請DNS指向你的IP，才有辦法讓自己以外的人看到你的網站，但本篇教學重點......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by young on
-    2022-11-14
+      若您覺得這篇文章對您有幫助，歡迎直接打開右下角的open chat及時聊天或留言或是分享出去讓更多人看到⊂◉‿◉つ~若此文章的thumbnail若使用的範例圖片有涉及侵權問題，請盡速通知站長以在最短時間內下架≦(._.)≧...感激不盡！!
+    
   </p>
-  <div class="tags">
-    
-    <a href="/tags/#Django" title="Django">Django</a>
-    
-    <a href="/tags/#Nginx" title="Nginx">Nginx</a>
-    
-    <a href="/tags/#Linux" title="Linux">Linux</a>
-    
-    <a href="/tags/#Vim" title="Vim">Vim</a>
-    
-  </div>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa-brands fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-facebook">
+        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!-- <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+    </li> -->
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=TF-IDF演算法&body=Hi,I found this website and thought you might like it http://yoursite-url/TF-IDF/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-heart">
+        <i class="fa-solid fa-heart fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>  
+<!-- css & js -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
   
 
-</div>
-<hr>
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '0f01988d486fce443b8b',
+      clientSecret: 'a86c8a22dceece62792d41d65b8c66d2dedd018d',
+      repo: 'youngOman.github.io',
+      owner: 'youngOman',
+      admin: 'youngOman',
+      id: 'Tue Nov 15 2022 19:39:55 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-TW',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
 
 
-  <!-- Pager -->
-  <ul class="pager">
-    
-    
-  </ul>
+<!-- 2. gitment comment -->
 
 
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5><a href="/">來訪者</a></h5>
-
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
+<!-- 3. disqus comment -->
 
 
+        <!-- comments end -->
         <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%AC%E8%AB%8B%E6%9C%9F%E5%BE%85"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">敬請期待~~~~~~</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Sentiment analysis" title="Sentiment analysis">Sentiment analysis</a>
+            
+            <a class="tag" href="/tags/#Algorithm" title="Algorithm">Algorithm</a>
+            
+            <a class="tag" href="/tags/#Textmining" title="Textmining">Textmining</a>
+            
+            <a class="tag" href="/tags/#機器學習" title="機器學習">機器學習</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/tags/">特色標簽</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#Django" title="Django" rel="1">Django</a>
-    
-    
-    
-    <a href="/tags/#Nginx" title="Nginx" rel="1">Nginx</a>
-    
-    
-    
-    <a href="/tags/#Linux" title="Linux" rel="1">Linux</a>
-    
-    
-    
-    <a href="/tags/#Vim" title="Vim" rel="1">Vim</a>
-    
-    
-    
-    <a href="/tags/#Sentiment analysis" title="Sentiment analysis" rel="1">Sentiment analysis</a>
-    
-    
-    
-    <a href="/tags/#Algorithm" title="Algorithm" rel="1">Algorithm</a>
-    
-    
-    
-    <a href="/tags/#Textmining" title="Textmining" rel="1">Textmining</a>
-    
-    
-    
-    <a href="/tags/#機器學習" title="機器學習" rel="1">機器學習</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">關於自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/scenery/about_sidebar.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>為了打造優化版的自己V2.0.1，正卯足全力閉關修鍊中..</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      <!-- 
-      <li>
-        <a href="/atom.xml">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-       -->
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/youngOman">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://twitter.com/CoolPat0921">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.instagram.com/lo.young">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.facebook.com/rick.pa.161">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa-brands fa-facebook fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最新貼文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../undefined/TF-IDF/">
-      <li>TF-IDF演算法</li>
-    </a>
-    
-    <a href="Django-deploy/">
-      <li>將Django部署至私有Ubuntu主機上</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
         <!-- Friends Blog -->
-
-<h5><a href="/">好碰友</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://akebee.com/" target="_blank">我自己....</a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Archives -->
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/11/">November 2022</a><span class="archive-list-count">2</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#程式設計">
-      <li>程式設計</li>
-    </a>
-    
-    <a href="/categories/#程式語言">
-      <li>程式語言</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-
-    
+          
+          <li>
+            <a href="https://akebee.com/" target="_blank">我自己....</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
@@ -796,7 +789,7 @@ DNS基礎知識
         </ul>
         <p class="copyright text-muted">
           Copyright &copy;
-          young
+          Young
           2022
           <br>
           <!-- Theme by
@@ -923,7 +916,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
