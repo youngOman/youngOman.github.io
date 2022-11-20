@@ -2,24 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite-url/categories/index.html</loc>
+    <loc>http://yoursite-url/tags/index.html</loc>
     
-    <lastmod>2022-11-16</lastmod>
+    <lastmod>2022-11-20</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/index.html</loc>
+    <loc>http://yoursite-url/categories/index.html</loc>
     
-    <lastmod>2022-11-16</lastmod>
+    <lastmod>2022-11-20</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/404.html</loc>
     
-    <lastmod>2022-11-16</lastmod>
+    <lastmod>2022-11-20</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -27,6 +33,8 @@
     
     <lastmod>2022-11-16</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -34,6 +42,8 @@
     
     <lastmod>2022-11-15</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -41,6 +51,8 @@
     
     <lastmod>2022-11-14</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -48,6 +60,8 @@
     
     <lastmod>2017-03-20</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -55,12 +69,14 @@
     
     <lastmod>2016-04-20</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
 
   <url>
     <loc>http://yoursite-url/</loc>
-    <lastmod>2022-11-16</lastmod>
+    <lastmod>2022-11-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -68,74 +84,74 @@
   
   <url>
     <loc>http://yoursite-url/tags/Django/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Nginx/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Linux/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Vim/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Sentiment-analysis/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/Algorithm/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/Textmining/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <loc>http://yoursite-url/tags/Text-mining/</loc>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yoursite-url/tags/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <loc>http://yoursite-url/tags/Maching-Learning/</loc>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/SSH/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 
   
   <url>
     <loc>http://yoursite-url/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 </urlset>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<!-- Head tag (contains Google-Analytics)-->
 <head>
   <!-- Google Analytics -->
   
@@ -19,29 +19,11 @@
     </script>
   
 
-  <!-- Baidu Tongji -->
-  
-    <script type="text/javascript">
-      // Originial
-      var _hmt = _hmt || [];
-      (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
-  
-
-  <!-- Baidu Push -->
-  
-
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
   <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
-  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="Young&#39;s coding tips &amp; life &amp; akebi"/>
   <meta name="keyword" content="young,akebi,IT,sofeware Engineer,blog,Blog"/>
@@ -133,7 +115,7 @@
       將Django部署至私有Ubuntu主機上 - Young &amp; Akebi&#39;s Tech Blog
     
   </title>
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="YG BLOG" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="atom.xml" title="YG BLOG" type="application/atom+xml">
 </head>
 
 
@@ -242,9 +224,9 @@ i {
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              <i class="fa-solid fa-address-card"></i>ABOUT
+              <i class="fa-solid fa-box-archive"></i>ARCHIVES
               
               
             </a>
@@ -253,9 +235,9 @@ i {
           
           
           <li>
-            <a href="/categories/">
+            <a href="/about/">
               
-              <i class="fa-sharp fa-solid fa-cube"></i>CATEGORIES
+              <i class="fa-solid fa-address-card"></i>ABOUT
               
               
             </a>
@@ -275,9 +257,9 @@ i {
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              <i class="fa-solid fa-box-archive"></i>ARCHIVES
+              <i class="fa-sharp fa-solid fa-cube"></i>CATEGORIES
               
               
             </a>
@@ -470,16 +452,16 @@ i {
         <h2 id="前情提要">前情提要</h2>
 <h3 id="部署的方式">部署的方式</h3>
 <blockquote>
-<p>網路上部署教學非常多，但高達95%都是教怎麼透過第三方部署平台例如 Heroku,Azuew,GCP…等等，但我就是想架在自己架設的 Ubuntu主機上阿!而關於各式部署方法及各自的優缺點我會再另外寫一篇文章，此篇就不多家贅述</p>
+<p>網路上部署教學非常多，但高達95%都是教怎麼透過第三方部署平台例如 Heroku,Azuew,GCP…等等，但我就是想架在自己架設的 Ubuntu主機上阿!而關於各式部署方法及各自的優缺點我會再另外寫一篇文章，此篇就不多加贅述</p>
 </blockquote>
 <h3 id="使用的工具、系統">使用的工具、系統</h3>
 <blockquote>
-<p>我會全程使用Ubuntu OS去實作，當然若你是用Windows也可以，但建議大家如果想在伺服器上做更多操作及管理，Linux是必備的技能，功能跟穩定性都是直接把Windows壓在地板上磨擦。<br>
-本篇教學重點會著重於 Django,uWSGI,Nginx，其餘提到的技術我會在專門另寫文章給大家參考</p>
+<p>我會全程使用Ubuntu OS去實作，當然用Windows也可以，但建議大家如果想更有效率的管理伺服器，Linux是必備的技能，功能跟穩定性都是直接把Windows壓在地板上磨擦.<br>
+<strong>本篇教學重點會著重於 Django,uWSGI,Nginx，其餘提到的技術我會在專門另寫文章給大家參考</strong></p>
 </blockquote>
 <h3 id="DNS基礎知識">DNS基礎知識</h3>
 <blockquote>
-<p>當使用者輸入Domain Name後，Web必須要先去一台有Domain Name和IP對應資料的主機去查詢這台電腦的 IP，而這台被查詣的主機為Domain Name Server，簡稱 DNS。<br>
+<p>當使用者輸入Domain Name後，Web必須要先去一台有Domain Name和IP對應資料的主機去查詢這台電腦的 IP，而這台被查詣的主機為Domain Name Server，簡稱 DNS.<br>
 Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近的DNS Server去做辨識，若查詢有結果，則會傳回這台主機的IP，進而跟它索取資料，若沒查到，就會發生DNS NOT FOUND的情形，而每個Domain Name對應要一組IP，且Domain Name跟IP一樣不會重覆</p>
 </blockquote>
 <hr>
@@ -490,7 +472,7 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
 <blockquote>
 <p>我購買網域的平台為cloudflare，這是我實作過程中會使用的網址，由於那網址是我到時候會拿來開發其他專案用，避免被當跳板、ddos、所以先碼起來<br>
 <img src="cloudflare.png" alt="cloudflare"><br>
-個人認為他的平台是我用過UI最人性化且支援暗黑模式的(暗黑模式是重點XD)，未來有購買網域需求不妨去看看。</p>
+個人認為他的平台是我用過UI最人性化且支援暗黑模式的(暗黑模式是重點XD)，未來有購買網域需求不妨去看看</p>
 </blockquote>
 <h3 id="Cloudflare網域管理平台"><a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">Cloudflare網域管理平台</a></h3>
 <p><img src="domain_price.png" alt="domain_price"></p>
@@ -498,7 +480,7 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
 <p>身為Linux使用廚，連進Server第一件事不外乎就是先更新所有套件庫</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update &amp;&amp; sudo apt-get upgrade -y</span><br></pre></td></tr></table></figure>
 <h3 id="建立Virtual-Enviornment-虛擬環境">建立Virtual Enviornment(虛擬環境)</h3>
-<p>不管是開發小、中、大型專案，建立一個獨立的開發環境是個非常重要的習慣，能讓自己或開發團隊都比較好Debug且不會有一堆不需要的套件而造成需要去追源碼的情況發生。</p>
+<p>不管是開發小、中、大型專案，建立一個獨立的開發環境是個非常重要的習慣，能讓自己或開發團隊都比較好Debug且不會有一堆不需要的套件而造成需要去追源碼的情況發生</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python3-venv</span><br><span class="line">python3 -m venv venv</span><br><span class="line"><span class="built_in">source</span> venv/bin/activate</span><br></pre></td></tr></table></figure>
 <h3 id="虛擬環境">虛擬環境</h3>
 <p>建立完後可以檢查是否真的已在虛擬環境中，檢查目前Python是跑全域還是venv裡的<br>
@@ -506,10 +488,10 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
 <h3 id="建立Django專案">建立Django專案</h3>
 <p>現在要建立一個開發環境相較於以前真的簡單許多，不需要先架好Server就能直接開始寫Code了</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install django</span><br><span class="line">django-admin.py startproject yourproject_name</span><br><span class="line"><span class="built_in">cd</span> yourproject_name</span><br></pre></td></tr></table></figure>
-<p>建立完後就先來runserver看是否有問題，預設為:8000 PORT，成功的話應看到以下畫面<br>
+<p>建立完後就先來<code>python manange.py runserver</code>看是否有問題，預設為:8000 PORT，成功的話應看到以下畫面<br>
 <img src="runserver.png" alt="runserver"></p>
 <h3 id="測試網域是否運作正常">測試網域是否運作正常</h3>
-<p>再來嘗試用你申請好的網域名稱去網頁試跑看看是否成功，若出現 DisallowedHost 錯誤代表你需要去你建立好的Django專案的settings.py的 ALLOWED_HOSTS[‘’] 新增你申請好的網域名稱。</p>
+<p>再來嘗試用你申請好的網域名稱去網頁試跑看看是否成功，若出現 DisallowedHost 錯誤代表你需要去你建立好的Django專案的<code>settings.py的ALLOWED_HOSTS['']</code>新增你申請好的網域名稱</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#settings.py</span></span><br><span class="line">SECRET_KEY = <span class="string">&#x27;djang.....&#x27;</span></span><br><span class="line"><span class="comment"># SECURITY WARNING: don&#x27;t run with debug turned on in production!</span></span><br><span class="line">DEBUG = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">ALLOWED_HOSTS = [<span class="string">&quot;yourhostname&quot;</span>,]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Application definition</span></span><br><span class="line"></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">&#x27;django.contrib.admin&#x27;</span>,</span><br></pre></td></tr></table></figure>
 <p>因為ALLOWED_HOSTS預設是空白的，意思就是除了localhost以外其他的外部IP都無法連上這個網站</p>
 <h2 id="開始設置uWSGI">開始設置uWSGI</h2>
@@ -518,7 +500,7 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
 <p>我們的最終目標就是要將client端的requests傳送給Nginx並傳遞給暫存socket後，socket會再拿給uWSGI處理最後才終於傳到Django</p>
 <h3 id="編寫測試檔">編寫測試檔</h3>
 <p>當然我們一步一步來，畢竟只要其中一環出錯，到最後大概也是9.5成的機率是跑不起來的，所以先建立一個test.py來簡單測試一下uwsgi的神奇功能</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test.py</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">application</span>(<span class="params">env, start_response</span>):</span></span><br><span class="line">    start_response(<span class="string">&#x27;200 OK&#x27;</span>, [(<span class="string">&#x27;Content-Type&#x27;</span>,<span class="string">&#x27;text/html&#x27;</span>)])</span><br><span class="line">    <span class="keyword">return</span> [<span class="string">b&quot;Hello World!&quot;</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">application</span>(<span class="params">env, start_response</span>):</span><br><span class="line">    start_response(<span class="string">&#x27;200 OK&#x27;</span>, [(<span class="string">&#x27;Content-Type&#x27;</span>,<span class="string">&#x27;text/html&#x27;</span>)])</span><br><span class="line">    <span class="keyword">return</span> [<span class="string">b&quot;Hello World!&quot;</span>]</span><br></pre></td></tr></table></figure>
 <p>寫好後再去終端機下uwsgi指令，這部是為了測試uWSGI是否有成功與Django取得聯繫</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --http :8000 --wsgi-file test.py</span><br></pre></td></tr></table></figure>
 <p>此時你去yourdomain:8000看到 &quot;Hello World!&quot;就代表此時您已經完成1/3的進度啦!</p>
@@ -527,23 +509,23 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
 <p>此時你在去<code>http://yourdomain</code>查看應能看到Nginx下載成功的 “Welcome to nginx!”頁面</p>
 <h3 id="Nginx-conf檔案設定">Nginx .conf檔案設定</h3>
-<p>此時去你的Linux主機的 /etc/nginx/sites-available建立 configuration file,將yourdomain改成你自己的網域名稱</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the upstream component nginx needs to connect to</span></span><br><span class="line">upstream django &#123;</span><br><span class="line">    server unix:///home/xxxx/user/django_project_name.sock;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># configuration of the server</span></span><br><span class="line">server &#123;</span><br><span class="line">    listen      443 ssl http2;</span><br><span class="line">    server_name  yourdomain.com;</span><br><span class="line">    charset     utf-8;</span><br><span class="line">    <span class="comment"># max upload size</span></span><br><span class="line">    client_max_body_size 75M;</span><br><span class="line">    <span class="comment"># Django media and static files</span></span><br><span class="line">    location /media  &#123;</span><br><span class="line">        <span class="built_in">alias</span> /home/xxxxx/user/media;</span><br><span class="line">    &#125;</span><br><span class="line">    location /static &#123;</span><br><span class="line">        <span class="built_in">alias</span> /home/xxxxx/user/static;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># Send all non-media requests to the Django server.</span></span><br><span class="line">    location / &#123;</span><br><span class="line">        uwsgi_pass  django;</span><br><span class="line">        include     /home/xxxxx/user/uwsgi_params;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ssl_certificate ....../yourdomain.com/fullchain.pem; <span class="comment"># managed by Certbot</span></span><br><span class="line">    ssl_certificate_key ....../yourdomain.com/privkey.pem; <span class="comment"># managed by Certbot</span></span><br><span class="line">    </span><br><span class="line">    access_log /var/<span class="built_in">log</span>/nginx/ubt-access.log;</span><br><span class="line">    error_log  /var/<span class="built_in">log</span>/nginx/ubt-error.log;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此時去你的Linux主機的<code>/etc/nginx/sites-available</code>建立 configuration file,將yourdomain改成你自己的網域名稱</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># the upstream component nginx needs to connect to</span></span><br><span class="line">upstream django &#123;</span><br><span class="line">    server unix:///home/xxxx/user/django_project_name.sock;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># configuration of the server</span></span><br><span class="line">server &#123;</span><br><span class="line">    listen      443 ssl http2;</span><br><span class="line">    server_name  yourdomain.com;</span><br><span class="line">    charset     utf-8;</span><br><span class="line">    <span class="comment"># max upload size</span></span><br><span class="line">    client_max_body_size 75M;</span><br><span class="line">    <span class="comment"># Django media and static files</span></span><br><span class="line">    location /media  &#123;</span><br><span class="line">        <span class="built_in">alias</span> /home/xxxxx/user/media;</span><br><span class="line">    &#125;</span><br><span class="line">    location /static &#123;</span><br><span class="line">        <span class="built_in">alias</span> /home/xxxxx/user/static;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># Send all non-media requests to the Django server.</span></span><br><span class="line">    location / &#123;</span><br><span class="line">        uwsgi_pass  django;</span><br><span class="line">        include     /home/xxxxx/user/uwsgi_params;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ssl_certificate ....../yourdomain.com/fullchain.pem; <span class="comment"># managed by Certbot</span></span><br><span class="line">    ssl_certificate_key ....../yourdomain.com/privkey.pem; <span class="comment"># managed by Certbot</span></span><br><span class="line">    </span><br><span class="line">    access_log /var/log/nginx/ubt-access.log;</span><br><span class="line">    error_log  /var/log/nginx/ubt-error.log;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>一般這時候可以直接開兩個Terminal這樣做的過程邏輯較清晰也比較知道自己在幹嘛，關於static,media,uwsgi_params各自的作用等一下會在進行解釋<br>
 <img src="left_nginx_right_uwsgi.png" alt="left_nginx_right_uwsgi"></p>
 <h3 id="SSL憑證">SSL憑證</h3>
-<p>已經2022年了，網路在資安方面基本上都普遍提升了不少，因此只要你能到的網站幾乎都是<code>https://</code>，要知道你的網站若沒有SSL憑證就不會有<code>https://</code>，這樣別人在進你的網站時會被大多數瀏覽器封鎖，在SEO上也會比較難搜尋到你的網站。在.config裡面的那兩行SSL_certificate是申請SSL憑證的證明，這個我會再另外寫一篇講解，因為申請流程也稍微複雜了點</p>
+<p>已經2022年了，網路在資安方面基本上都普遍提升了不少，因此只要你能到的網站幾乎都是<code>https://</code>，要知道你的網站若沒有SSL憑證就不會有<code>https://</code>，這樣別人在進你的網站時會被大多數瀏覽器封鎖，在SEO上也會比較難搜尋到你的網站在.config裡面的那兩行SSL_certificate是申請SSL憑證的證明，這個我會再另外寫一篇講解，因為申請流程也稍微複雜了點</p>
 <h3 id="uwsgi-params">uwsgi_params</h3>
 <p>要注意這個檔案是要去你的專案目錄底下而不是nginx目錄底下，我的話就是在<code>/home/xxxx/django_project_name</code>這邊建立uwsgi_params，內容如下，意思就是告訴非靜態檔的全部去跑Server</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /home/xxxxx/&lt;project_name&gt;/uwsgi_params</span></span><br><span class="line">uwsgi_param  QUERY_STRING       <span class="variable">$query_string</span>;</span><br><span class="line">uwsgi_param  REQUEST_METHOD     <span class="variable">$request_method</span>;</span><br><span class="line">uwsgi_param  CONTENT_TYPE       <span class="variable">$content_type</span>;</span><br><span class="line">uwsgi_param  CONTENT_LENGTH     <span class="variable">$content_length</span>;</span><br><span class="line">uwsgi_param  REQUEST_URI        <span class="variable">$request_uri</span>;</span><br><span class="line">uwsgi_param  PATH_INFO          <span class="variable">$document_uri</span>;</span><br><span class="line">uwsgi_param  DOCUMENT_ROOT      <span class="variable">$document_root</span>;</span><br><span class="line">uwsgi_param  SERVER_PROTOCOL    <span class="variable">$server_protocol</span>;</span><br><span class="line">uwsgi_param  REQUEST_SCHEME     <span class="variable">$scheme</span>;</span><br><span class="line">uwsgi_param  HTTPS              <span class="variable">$https</span> if_not_empty;</span><br><span class="line">uwsgi_param  REMOTE_ADDR        <span class="variable">$remote_addr</span>;</span><br><span class="line">uwsgi_param  REMOTE_PORT        <span class="variable">$remote_port</span>;</span><br><span class="line">uwsgi_param  SERVER_PORT        <span class="variable">$server_port</span>;</span><br><span class="line">uwsgi_param  SERVER_NAME        <span class="variable">$server_name</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="建立軟連結">建立軟連結</h3>
-<p>告訴Nginx我這個網址要啟用了</p>
+<p>告訴Nginx我這個網址要啟用了，一般可以把所有網站寫到<code>include</code>檔內就不必每次都得寫這行</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s <span class="regexp">/etc/</span>nginx<span class="regexp">/sites-available/y</span>ourdomains.conf <span class="regexp">/etc/</span>nginx<span class="regexp">/sites-enabled/</span></span><br></pre></td></tr></table></figure>
-<h3 id="告訴Nginx我們的static-files的位置">告訴Nginx我們的static_files的位置</h3>
+<h3 id="讓Nginx知道static-files的位置">讓Nginx知道static_files的位置</h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">Django settings for django_project_name project.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">For the full list of settings and their values, see</span></span><br><span class="line"><span class="string">https://docs.djangoproject.com/en/3.1/ref/settings/</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line"><span class="comment"># Build paths inside the project like this: BASE_DIR / &#x27;subdir&#x27;.</span></span><br><span class="line">BASE_DIR = Path(__file__).resolve().parent.parent</span><br></pre></td></tr></table></figure>
 <p>我自己會習慣將靜態檔案位置設定加在最下方</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STATIC_URL = <span class="string">&#x27;/static/&#x27;</span></span><br><span class="line">STATIC_ROOT = os.path.join(BASE_DIR, <span class="string">&quot;static/&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>最後執行，這步驟是要告訴Django將我們的靜態檔案Ex:js,css,img…等等全部打包進我們指定的目錄底下。</p>
+<p>最後執行，這步驟是要告訴Django將我們的靜態檔案Ex:js,css,img…等等全部打包進我們指定的目錄底下</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py collectstatic</span><br></pre></td></tr></table></figure>
 <p>重啟Nginx Server</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -s nginx reload</span><br></pre></td></tr></table></figure>
@@ -552,7 +534,7 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
 <p>讓uWSGI生成socket來達到雙向溝通的目的，這邊的chmod666是為了要開權限給socket他才能寫入，當然Windows沒有權限管理的問題就可以不用加</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --socket yourdomains.sock --module yourdomains.wsgi --chmod-socket=666</span><br></pre></td></tr></table></figure>
 <h2 id="撰寫uWSGI執行檔">撰寫uWSGI執行檔</h2>
-<p>在正式發佈階段時uwsgi夾帶的參數指令會變得較繁雜，因此我們直接寫一個.ini檔就可避免每次都得打一長串，可能還會有打錯的問題。</p>
+<p>在正式發佈階段時uwsgi夾帶的參數指令會變得較繁雜，因此我們直接寫一個.ini檔就可避免每次都得打一長串，可能還會有打錯的問題</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[uwsgi]</span><br><span class="line">socket = : 8099</span><br><span class="line"><span class="built_in">chdir</span> = /home/xxxxx/mysite</span><br><span class="line">module = apps.wsgi <span class="comment">#(在哪個資料夾apps就換成那)</span></span><br><span class="line">master = <span class="literal">true</span></span><br><span class="line">processes = 4</span><br><span class="line">vacuum = <span class="literal">true</span></span><br><span class="line">enable-threads = <span class="literal">true</span></span><br><span class="line">buffer-size = 5309</span><br></pre></td></tr></table></figure>
 <p>之後在執行uwsgi指令只需簡潔的一行即可</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uwsgi --ini yourdomains_uwsgi.ini</span><br></pre></td></tr></table></figure>
@@ -562,13 +544,13 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
 <h3 id="Emperor-mode">Emperor mode</h3>
 <p>何謂emperor mode(皇帝模式)，一般會在大型專案開發時遇到，就是當你一個專案底下有大量的apps同時在執行時，他能夠監控每一個被執行的實例(封臣)，<strong>對我也覺得很中二XDDD</strong>，那他的功能其實真如其名，<strong>非常強大</strong><br>
 有興趣了解他的功能可以直接去看官方docs =&gt;   <a target="_blank" rel="noopener" href="https://uwsgi-docs.readthedocs.io/en/latest/Emperor.html">emperor mode</a></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/xxxxx/venv/md/</span><br><span class="line">mkdir vassals</span><br><span class="line">sudo ln -s /home/xxxx/django_project_name/django_project_name_uwsgi.ini /home/xxxx/venv/md/vassals/</span><br><span class="line">uwsgi --emperor /home/udoms/env/md/vassals --uid www-data --gid www-data</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/xxxxx/venv/md/</span><br><span class="line"><span class="built_in">mkdir</span> vassals</span><br><span class="line">sudo <span class="built_in">ln</span> -s /home/xxxx/django_project_name/django_project_name_uwsgi.ini /home/xxxx/venv/md/vassals/</span><br><span class="line">uwsgi --emperor /home/xxxx/venv/vassals --uid www-data --gid www-data</span><br></pre></td></tr></table></figure>
 <h2 id="開機自動執行程式碼">開機自動執行程式碼</h2>
-<p>由於就算是中小企業帶有UPS24小時不斷運作的Server，還是會有需要重開機的時候，所以身為工程師就應該避免做相同的事情超過2次，將他寫進rc.local檔讓他開機自動背景執行。</p>
+<p>由於就算是中小企業帶有UPS24小時不斷運作的Server，還是會有需要重開機的時候，所以身為工程師就應該避免做相同的事情超過2次，將他寫進rc.local檔讓他開機自動背景執行</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/rc.local</span><br><span class="line">su -l young -c <span class="string">&quot;cd  /home/XXXX/django_project_name/ uwsgi --ini uwsgi.ini&quot;</span></span><br></pre></td></tr></table></figure>
 <h2 id="完成">完成!!!</h2>
 <blockquote>
-<p>感謝大家的閱讀，若哪裡有問題也歡迎打開右下的聊天室或是直接留言~~!</p>
+<p>感謝大家的閱讀，若有問題歡迎打開右下及時聊天室或是直接留言~~!</p>
 </blockquote>
 
 
@@ -616,11 +598,7 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
         <i class="fa-brands fa-facebook" aria-hidden="true"></i>
       </a>
     </li>
-    <!-- <li class="social-share-li">
-      <a target="_blank" class="social-share-icon icon-weibo">
-        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-      </a>
-    </li> -->
+
     <li class="social-share-li">
       <a target="_blank" class="social-share-icon" href="mailto:?subject=將Django部署至私有Ubuntu主機上&body=Hi,I found this website and thought you might like it http://yoursite-url/Django-deploy/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
@@ -713,7 +691,7 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前情提要</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%83%A8%E7%BD%B2%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">部署的方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E3%80%81%E7%B3%BB%E7%B5%B1"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">使用的工具、系統</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DNS%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">DNS基礎知識</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B3%BC%E8%B2%B7%E7%B6%B2%E5%9F%9F"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">購買網域</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cloudflare%E7%B6%B2%E5%9F%9F%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">Cloudflare網域管理平台</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%96%8B%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">開始之前</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BB%BA%E7%AB%8BVirtual-Enviornment-%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">建立Virtual Enviornment(虛擬環境)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">虛擬環境</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BB%BA%E7%AB%8BDjango%E5%B0%88%E6%A1%88"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">建立Django專案</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B8%AC%E8%A9%A6%E7%B6%B2%E5%9F%9F%E6%98%AF%E5%90%A6%E9%81%8B%E4%BD%9C%E6%AD%A3%E5%B8%B8"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">測試網域是否運作正常</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%96%8B%E5%A7%8B%E8%A8%AD%E7%BD%AEuWSGI"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">開始設置uWSGI</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B7%A8%E5%AF%AB%E6%B8%AC%E8%A9%A6%E6%AA%94"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">編寫測試檔</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nginx-Server%E8%A8%AD%E5%AE%9A"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Nginx Server設定</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Nginx-conf%E6%AA%94%E6%A1%88%E8%A8%AD%E5%AE%9A"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Nginx .conf檔案設定</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SSL%E6%86%91%E8%AD%89"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">SSL憑證</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#uwsgi-params"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">uwsgi_params</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BB%BA%E7%AB%8B%E8%BB%9F%E9%80%A3%E7%B5%90"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">建立軟連結</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%91%8A%E8%A8%B4Nginx%E6%88%91%E5%80%91%E7%9A%84static-files%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">告訴Nginx我們的static_files的位置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%93Nginx-uWSGI-Django%E6%88%90%E5%8A%9F%E6%BA%9D%E9%80%9A"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">讓Nginx, uWSGI, Django成功溝通</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%92%B0%E5%AF%ABuWSGI%E5%9F%B7%E8%A1%8C%E6%AA%94"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">撰寫uWSGI執行檔</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%88%90%E5%8A%9F%E7%95%AB%E9%9D%A2"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">成功畫面</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Emperor-mode"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">Emperor mode</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%96%8B%E6%A9%9F%E8%87%AA%E5%8B%95%E5%9F%B7%E8%A1%8C%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">開機自動執行程式碼</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%8C%E6%88%90"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">完成!!!</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前情提要</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%83%A8%E7%BD%B2%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">部署的方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E3%80%81%E7%B3%BB%E7%B5%B1"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">使用的工具、系統</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DNS%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">DNS基礎知識</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%B3%BC%E8%B2%B7%E7%B6%B2%E5%9F%9F"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">購買網域</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Cloudflare%E7%B6%B2%E5%9F%9F%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">Cloudflare網域管理平台</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%96%8B%E5%A7%8B%E4%B9%8B%E5%89%8D"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">開始之前</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BB%BA%E7%AB%8BVirtual-Enviornment-%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">建立Virtual Enviornment(虛擬環境)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">虛擬環境</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BB%BA%E7%AB%8BDjango%E5%B0%88%E6%A1%88"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">建立Django專案</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B8%AC%E8%A9%A6%E7%B6%B2%E5%9F%9F%E6%98%AF%E5%90%A6%E9%81%8B%E4%BD%9C%E6%AD%A3%E5%B8%B8"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">測試網域是否運作正常</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%96%8B%E5%A7%8B%E8%A8%AD%E7%BD%AEuWSGI"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">開始設置uWSGI</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B7%A8%E5%AF%AB%E6%B8%AC%E8%A9%A6%E6%AA%94"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">編寫測試檔</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Nginx-Server%E8%A8%AD%E5%AE%9A"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Nginx Server設定</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Nginx-conf%E6%AA%94%E6%A1%88%E8%A8%AD%E5%AE%9A"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">Nginx .conf檔案設定</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#SSL%E6%86%91%E8%AD%89"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">SSL憑證</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#uwsgi-params"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">uwsgi_params</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%BB%BA%E7%AB%8B%E8%BB%9F%E9%80%A3%E7%B5%90"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">建立軟連結</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%93Nginx%E7%9F%A5%E9%81%93static-files%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">讓Nginx知道static_files的位置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%93Nginx-uWSGI-Django%E6%88%90%E5%8A%9F%E6%BA%9D%E9%80%9A"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">讓Nginx, uWSGI, Django成功溝通</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%92%B0%E5%AF%ABuWSGI%E5%9F%B7%E8%A1%8C%E6%AA%94"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">撰寫uWSGI執行檔</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%88%90%E5%8A%9F%E7%95%AB%E9%9D%A2"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">成功畫面</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Emperor-mode"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">Emperor mode</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%96%8B%E6%A9%9F%E8%87%AA%E5%8B%95%E5%9F%B7%E8%A1%8C%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">開機自動執行程式碼</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%8C%E6%88%90"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">完成!!!</span></a></li></ol>
         
         </div>
       </aside>
@@ -879,9 +857,6 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
 
           
 
-          
-
-          
 
         </ul>
         <p class="copyright text-muted">
@@ -941,10 +916,6 @@ Ex:當你輸入www.shopee.com.tw時，Web就會將www.shopee.com.tw傳送最近�
     <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
   
 
-  
-    <!-- Line start -->
-    <script async="text/javascript" src="/js/line.js"></script>
-    <!-- Line end -->
   
 
 

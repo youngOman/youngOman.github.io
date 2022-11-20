@@ -26,10 +26,9 @@
     
       
       
-    <summary type="html">&lt;h1&gt;尚未完成~~~稍後補上&lt;/h1&gt;
-&lt;h2 id=&quot;SSH基礎知識&quot;&gt;SSH基礎知識&lt;/h2&gt;
+    <summary type="html">&lt;h2 id=&quot;前情提要&quot;&gt;前情提要&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;SSH 是一種遠端連線安全加密傳輸協定，CUI/GUI兩種版本都有，大部分的 Linux 伺服器都會提供 SSH 的連線服務，讓使用者或管理者遠端</summary>
+&lt;p&gt;只需要一個Terminal便能在主機之間穿梭自如，無所不能 ! 絕大部分的Linux系統都已有內建ssh，而Windows也是在近幾年才能不用額外安裝 PuTTy 而直接使用系統原生 ssh 功能，但</summary>
       
     
     
@@ -67,9 +66,9 @@
     
     <category term="Algorithm" scheme="http://yoursite-url/tags/Algorithm/"/>
     
-    <category term="Textmining" scheme="http://yoursite-url/tags/Textmining/"/>
+    <category term="Text mining" scheme="http://yoursite-url/tags/Text-mining/"/>
     
-    <category term="機器學習" scheme="http://yoursite-url/tags/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92/"/>
+    <category term="Maching Learning" scheme="http://yoursite-url/tags/Maching-Learning/"/>
     
   </entry>
   
